@@ -1,0 +1,81 @@
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto; /* Centering the container */
+  border: 2px solid #ccc; /* Adding border */
+  border-radius: 10px; /* Adding border radius */
+  padding: 20px; /* Adding padding */
+}
+
+/* Form styling */
+.form {
+  margin-top: 20px;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Form group label styling */
+.form-group label {
+  font-weight: bold;
+}
+
+/* Input styling */
+.form-control {
+  padding: 12px;
+  border: 2px solid #4CAF50;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  width: 100%; /* Making input full-width */
+  margin-top: 5px; /* Adjusting margin */
+}
+
+/* Input focus state */
+.form-control:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #ffebee;
+  margin-top: 5px;
+}
+
+/* Button styling */
+.btn-form {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Making button full-width */
+  margin-top: 10px; /* Adjusting margin */
+}
+
+.btn-form:hover {
+  background-color: #45a049;
+}
+
+/* Disabled button styling */
+.btn-form:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

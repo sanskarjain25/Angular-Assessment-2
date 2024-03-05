@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="title">Inventory List</h1>
+
+  <h3 *ngIf="inventorys.length === 0">No inventory found</h3>
+
+  <div class="inventory-list" *ngFor="let inventory of inventorys; let i = index">
+    <div class="inventory-list-item">
+      <div class="inventory-list-item-details">
+        <h3>Name: {{ inventory.name }}</h3>
+        <p>Price: {{ inventory.price }}</p>
+        <p>Quantity: {{ inventory.quantity }}</p>
+        <p>Description: {{ inventory.description }}</p>
+      </div>
+      <div class="inventory-list-item-actions">
+        <a class="btn" (click)="editInventory(i)">Edit</a>
+        <a class="btn delete-btn" (click)="deleteInventory(inventory.id)" *ngIf="userRole === 'Manager'">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container form-container">
+  <h1 class="title">Edit Inventory</h1>
+
+  <form (ngSubmit)="onSubmit(inventoryForm)" #inventoryForm="ngForm" class="form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" required [ngModel]="inventory.name" #name="ngModel"/>
+      <div class="form-group-error" *ngIf="name.invalid && name.touched">
+        Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" id="price" name="price" required [ngModel]="inventory.price" #price="ngModel" [min]="100"/>
+      <div class="form-group-error" *ngIf="price.invalid && price.touched">
+        Price is required it should be minimum 100
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="quantity">Quantity</label>
+      <input type="number" class="form-control" id="quantity" name="quantity" required [ngModel]="inventory.quantity" #quantity="ngModel" [min]="2"/>
+      <div class="form-group-error" *ngIf="quantity.invalid && quantity.touched">
+        Quantity is required it should be minimum 100
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" class="form-control" id="description" name="description" required [ngModel]="inventory.description" #description="ngModel"/>
+      <div class="form-group-error" *ngIf="description.invalid && description.touched">
+        Description is required
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-form" [disabled]="!inventoryForm.form.valid">
+      Edit Inventory
+    </button>
+  </form>
+
+</div>
